@@ -6,9 +6,7 @@ const express = require('express');
 // const taskRouter = require('./task/router')
 
 const server = express();
-
 server.use(express.json());
-
 
 // server.use('/api/resources', resourceRouter);
 // server.use('/api/projects', projectRouter);

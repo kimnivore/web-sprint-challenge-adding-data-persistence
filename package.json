@@ -3,7 +3,14 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent"
+    "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex rollback",
+    "seed": "knex seed:run",
+    "cleanup": "knex seed:run --specific=00-cleanup.js",
+    "resetdb": "npm run roll back && npm run migrate && npm run seed"
   },
   "repository": {
     "type": "git",
