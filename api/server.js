@@ -12,7 +12,7 @@ server.use('/api/resources', resourceRouter);
 server.use('/api/projects', projectRouter);
 server.use('/api/tasks', taskRouter);
 
-server.use('*', (req, res) => { //catchall needs to be at end
+server.use('*', (req, res) => { 
     res.json({ api: 'up' })
 })
 
