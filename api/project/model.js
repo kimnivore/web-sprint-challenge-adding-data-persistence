@@ -10,7 +10,6 @@ async function create(project) {
    return get().where({ project_id }).first();
 }
 
-
 module.exports = {
     get,
     create
