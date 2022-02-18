@@ -7,7 +7,7 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "migrate": "knex migrate:latest",
-    "rollback": "knex rollback",
+    "rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
     "cleanup": "knex seed:run --specific=00-cleanup.js",
     "resetdb": "npm run roll back && npm run migrate && npm run seed"

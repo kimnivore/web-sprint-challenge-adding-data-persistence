@@ -6,8 +6,8 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
     Project.get()
-        .then(projects => {
-            res.status(200).json(projects);
+        .then(project => {
+            res.status(200).json(project);
     })
         .catch(next)
 });
